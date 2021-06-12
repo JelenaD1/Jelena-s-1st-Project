@@ -1,0 +1,107 @@
+h1 {
+  font-family: 'Gruppo', cursive;
+  text-align: center;
+  font-size: 4.3rem;
+  padding: 20px;
+  color: #002222;
+}
+h1 {
+  display: block;
+  font-size: 3em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+h2 {
+  font-family: Georgia, serif;
+  color: #943948;
+}
+h3 {
+  display: block;
+  font-size: 1.5em;
+  font-family: 'Gruppo', serif;
+  text-align: center;
+  /* margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+  font-weight: bold;
+  color: #d80800;
+}
+#makeup-collection {
+    margin: 2rem;
+}
+
+.card {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 7rem;
+  height: 17rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 5px 6px #e5869f;
+}
+
+.toy-avatar {
+  justify-self: center;
+  height: 6rem;
+  width: auto;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* button {
+  position: relative;
+  background-color: #e04b52;
+  border: none;
+  border-radius: 5px;
+  height: 3rem;
+  width: max-content;
+  color: whitesmoke;
+  font-size: 18px;
+  justify-self: center;
+} */
+
+/* button {
+  appearance: auto;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+} */
