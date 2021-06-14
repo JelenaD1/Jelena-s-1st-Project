@@ -1,51 +1,346 @@
+
+body {
+  background-image: url(phpto.jpeg);
+  
+  background-color: #ffe5d9;
+  background-blend-mode: soft-light;
+}
+
+
+.container {
+  position: relative;
+  width: 400px;
+  min-height: 5px;
+  background: lightpink;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.container .post {
+  display: none;
+}
+
+.container .text {
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+
+.container .edit {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+
+.container .edit:hover {
+  text-decoration: underline;
+}
+
+.container .star-widget input {
+  display: none;
+}
+
+.star-widget label {
+  font-size: 40px;
+  color: white;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+
+}
+
+ input:not(:checked) ~ label:hover,
+ input:not(:checked) ~label:hover ~ label{
+  color:rgb(255, 221, 68);
+ }
+ input:checked ~ label{
+   color: rgb(255, 221, 68);
+ }
+
+ input#rate-5:checked ~ label{
+   color: rgb(255, 238, 119);
+   text-shadow: 0 0 20px #952;
+
+ }
+ #rate-1:checked ~ form header:before { 
+   content: "I just hate it 😠";
+   
+}
+#rate-2:checked ~ form header:before { 
+  content: "I don't like it 😞";
+  
+}
+#rate-3:checked ~ form header:before { 
+  content: "I just like it 😉";
+  
+}
+#rate-4:checked ~ form header:before { 
+  content: "It is awesome 🤩";
+  
+}
+#rate-5:checked ~ form header:before { 
+  content: "I love it 😍";
+  
+}
+
+.container form {
+  display: none;
+}
+
+input:checked ~ form {
+  display: block;
+}
+
+ form header {
+   width: 100%;
+   font-size: 25px;
+   color: #fe7;
+   font-weight: 500;
+   margin: 5px 0 20px 0;
+   text-align: center;
+   transition: all 0.2s ease;
+ }
+
+
+ form .textarea {
+   height: 100px;
+   width: 100%;
+   overflow: hidden;
+
+ }
+
+ form.textarea textarea{
+   height: 100%;
+   width: 100%;
+   outline: none;
+   color: #eee;
+   border: 1px solid #333;
+   background: #222;
+   padding: 10px;
+   font-size: 17px;
+   resize: none;
+
+ }
+
+ form .btn {
+   height: 45px;
+   width: 100%;
+   margin: 15px 0;
+
+ }
+
+ form .btn button {
+   height: 100%;
+   width: 100%;
+   border: 1px solid #444;
+   outline: none;
+   background: lightpink;
+   color: #999;
+   font-size: 17px;
+   font-weight: 500;
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: all 0.3s ease;
+
+ }
+
+ form.btn button:hover{
+   background: #1b1b1b;
+
+ }
+/* .stars-outer{
+  position: relative;
+  display: inline block;
+  
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width:0;
+}
+
+.stars-outer::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ccc;
+
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: yellow;
+
+} */
+@keyframes blink {
+  0% {
+    background: violet;
+  }
+  15% {
+    background: indigo;
+  }
+  42% {
+    background: blue;
+  }
+  58% {
+    background: yellow;
+  }
+  70% {
+    background: #c38e70;
+  }
+  85% {
+    background: red;
+  }
+  100% {
+    background: beige;
+  }
+
+}
+
+@keyframes blink {
+  0% {
+    background: #e76f51;
+  }
+  15% {
+    background: #2ec4b6;
+  }
+  30% {
+    background: #d8bbff;
+  }
+  42% {
+    background: #9d0208;
+  }
+  58% {
+    background: yellow;
+  }
+  65% {
+    background: #43aa8b;
+  }
+  70% {
+    background: green;
+  }
+  85% {
+    background: red;
+  }
+  100% {
+    background: #abc4ff;
+  }
+
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background: #e76f51;
+  }
+  15% {
+    background: #2ec4b6;
+  }
+  30% {
+    background: #d8bbff;
+  }
+  42% {
+    background: #9d0208;
+  }
+  58% {
+    background: yellow;
+  }
+  65% {
+    background: #43aa8b;
+  }
+  70% {
+    background: #c38e70;
+  }
+  85% {
+    background: red;
+  }
+  100% {
+    background: #abc4ff;
+  }
+
+}
+
+
+
 h1 {
   font-family: 'Gruppo', cursive;
   text-align: center;
-  font-size: 4.3rem;
-  padding: 20px;
-  color: #002222;
-}
-h1 {
-  display: block;
   font-size: 3em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
+  padding: 20px;
+  color: #432534;
+  animation: blink 10s infinite;
+   -webkit-animation: blink 8s infinite;
 }
+
+
+
+
 h2 {
   font-family: Georgia, serif;
-  color: #943948;
+  color: #d90429
+  /* animation: blink 10s infinite;
+   -webkit-animation: blink 8s infinite; */
 }
+
+
+
+
+
 h3 {
   display: block;
   font-size: 1.5em;
-  font-family: 'Gruppo', serif;
+  font-family: 'Inter', sans-serif;
   text-align: center;
   /* margin-block-start: 0.83em;
   margin-block-end: 0.83em;
   margin-inline-start: 0px;
   margin-inline-end: 0px; */
   font-weight: bold;
-  color: #d80800;
+  color: #C44900;
+}
+
+
+
+h4 {
+  font-size: small;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  color: #073b4c;
 }
 #makeup-collection {
     margin: 2rem;
 }
 
-.card {
+.star-six {
+  display: ruby-base-container;
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
-  width: 7rem;
-  height: 17rem;
+  width: 10rem;
+  height: 18rem;
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 5px 6px #e5869f;
+  background-color: #ffe5d9;
 }
 
-.toy-avatar {
+.pic-style {
   justify-self: center;
   height: 6rem;
   width: auto;
@@ -69,39 +364,3 @@ p {
 
 
 
-/* button {
-  position: relative;
-  background-color: #e04b52;
-  border: none;
-  border-radius: 5px;
-  height: 3rem;
-  width: max-content;
-  color: whitesmoke;
-  font-size: 18px;
-  justify-self: center;
-} */
-
-/* button {
-  appearance: auto;
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: -internal-light-dark(black, white);
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: center;
-  align-items: flex-start;
-  cursor: default;
-  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
-  box-sizing: border-box;
-  margin: 0em;
-  font: 400 13.3333px Arial;
-  padding: 1px 6px;
-  border-width: 2px;
-  border-style: outset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
-} */

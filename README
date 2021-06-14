@@ -1,7 +1,12 @@
-Create and HTML and CSS 
-/build a wire framework for the app- MAKEUP COLLECTION 
+## Makeup Collection
+
+Today we will be building an app for viewing Makeup Collection for Fall/Winter 2021. We will be using an open API
+"http://makeup-api.herokuapp.com/api/v1/products.json?brand=l%27oreal&tags_list=glutenfree".
+
+
+## Setup
 
 
 
-core deliverable:
--get everything in a card
+
+
