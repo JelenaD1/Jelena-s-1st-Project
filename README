@@ -4,7 +4,7 @@ Today we will be building an app for viewing Makeup Collection for Fall/Winter 2
 "http://makeup-api.herokuapp.com/api/v1/products.json?brand=l%27oreal&tags_list=glutenfree".
 
 
-## Setup
+
 
 
 
