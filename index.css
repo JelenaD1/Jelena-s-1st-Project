@@ -277,7 +277,18 @@ h2 {
   /* animation: blink 10s infinite;
    -webkit-animation: blink 8s infinite; */
 }
+h5 {
+  font-family: Georgia, serif;
+  color: #d90429;
+  font-weight: bold;
+  /* animation: blink 10s infinite;
+   -webkit-animation: blink 8s infinite; */
+}
 
+#comment {
+  width: 30%;
+  height: 30;
+}
 
 
 
@@ -308,6 +319,7 @@ h4 {
 }
 
 .star-six {
+  
   display: ruby-base-container;
   text-align: center;
   border: grey solid 1px;

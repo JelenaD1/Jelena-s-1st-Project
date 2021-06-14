@@ -1,6 +1,28 @@
 {
-    "reviews": [
-        "Great winter collection and great customer service",
-        "I love my new eyeshadow palette!"
-    ]
+  "reviews": [
+    {
+      "id": 1,
+      "element": "Great winter collection and great customer service"
+    },
+    {
+      "id": 2,
+      "element": "I love my new eyeshadow palette!"
+    },
+    {
+      "element": "My bronzer is amazing!",
+      "id": 3
+    },
+    {
+      "element": "This collection is beautiful.",
+      "id": 4
+    },
+    {
+      "element": "jelenaaa",
+      "id": 5
+    },
+    {
+      "element": "jelenaaa",
+      "id": 6
+    }
+  ]
 }
