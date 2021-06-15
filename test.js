@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const ul = document.querySelector(".review-form")
   const form = document.querySelector(".form-review")
 
+  // Widget ratings
   btn.onclick = () => {
     widget.style.display = "none"
     post.style.display = "block"
@@ -17,18 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     return false
   }
-  //Get the review from db.json and displayed them on page
-  const urlFetch = "http://localhost:3000/reviews"
-  fetch(urlFetch)
-    .then(resp => resp.json())
-    .then(data => {
-      data.forEach(review => {
-        const li = document.createElement("li")
-        li.innerHTML = review.element
-        ul.append(li)
-      })
-    })
-//Allow user to leave a comment and allow comments to be displayed on the page(persistance needed)
+  
   form.addEventListener("submit", (event) => {
     event.preventDefault()
     const newReview = form.querySelector("#comment")
@@ -39,21 +29,22 @@ document.addEventListener("DOMContentLoaded", () => {
         Accept: "application/json"
       },
       body: JSON.stringify({
-        element: newReview.value
+        comment: newReview.value
       })
     }
 
-    fetch(urlFetch, confObject)
+    fetch("http://localhost:3000/comments", confObject)
       .then(resp => resp.json())
       .then(data => {
         const li = document.createElement("li")
-        li.innerHTML = data.element
+        li.innerHTML = data.comment
         ul.append(li)
         newReview.value = ""
       })
   })
 
   const div = document.querySelector("div#makeup-collection")
+  const options = []
   const url = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=l%27oreal&tags_list=glutenfree"
   const addCardCollection = (collection) => {
     const collectionCard = document.createElement("div")
@@ -71,16 +62,46 @@ document.addEventListener("DOMContentLoaded", () => {
     collectionCard.append(collectionProduct, collectionImage, collectionPrice, collectionName)
     div.append(collectionCard)
   }
+
+  fetch("http://localhost:3000/options")
+    .then(resp => resp.json())
+    .then(data => {
+      data.forEach(object => {
+        const option = document.createElement("option")
+        option.value = object.id
+        option.innerHTML = object.name
+        option.name = object.name
+        menu.append(option)
+        options.push(object.name)
+      })
+    })
+
   const menu = document.querySelector("#menu")
   menu.addEventListener("change", (event) => {
     div.innerHTML = ""
     event.preventDefault()
+    console.log(event.target.value)
+    fetch("http://localhost:3000/comments")
+      .then(resp => resp.json())
+      .then(data => {
+        const filterData = data.filter(comment =>
+          comment.optionId === parseInt(event.target.value)
+        )
+
+        const ul = document.querySelector("ul")
+        ul.innerHTML = ""
+        filterData.forEach(object => {
+          const li = document.createElement("li")
+          li.innerHTML = object.content
+          ul.append(li)
+        })
+      })
+
     fetch(url)
       .then(resp => resp.json())
       .then(data => {
-        console.log(data)
         data.filter((productType) => {
-          if (productType.product_type === menu.value) {
+          if (productType.product_type === options[event.target.value - 1]) {
             addCardCollection(productType)
           }
         })

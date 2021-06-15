@@ -1,28 +1,121 @@
 {
-  "reviews": [
+  "options": [
     {
       "id": 1,
-      "element": "Great winter collection and great customer service"
+      "name": "bronzer"
     },
     {
       "id": 2,
-      "element": "I love my new eyeshadow palette!"
+      "name": "blush"
     },
     {
-      "element": "My bronzer is amazing!",
-      "id": 3
+      "id": 3,
+      "name": "eyeliner"
     },
     {
-      "element": "This collection is beautiful.",
-      "id": 4
+      "id": 4,
+      "name": "eyeshadow"
     },
     {
-      "element": "jelenaaa",
-      "id": 5
+      "id": 5,
+      "name": "foundation"
     },
     {
-      "element": "jelenaaa",
-      "id": 6
+      "id": 6,
+      "name": "mascara"
+    },
+    {
+      "id": 7,
+      "name": "nail_polish"
+    },
+    {
+      "id": 8,
+      "name": "lipstick"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "content": "Amazing!",
+      "optionId": 1
+    },
+    {
+      "id": 2,
+      "content": "This blush is everything!",
+      "optionId": 2
+    },
+    {
+      "id": 3,
+      "content": "Great collection. blush is my favorite.",
+      "optionId": 2
+    },
+    {
+      "id": 4,
+      "content": "Best eyeliner I ever had",
+      "optionId": 3
+    },
+    {
+      "id": 5,
+      "content": "I am not very happy with this eyeliner",
+      "optionId": 3
+    },
+    {
+      "id": 6,
+      "content": "Need more colors",
+      "optionId": 3
+    },
+    {
+      "id": 7,
+      "content": "Best palette I've seen",
+      "optionId": 4
+    },
+    {
+      "id": 8,
+      "content": "I loved the colors in pallete. Can't wait for re-stock",
+      "optionId": 4
+    },
+    {
+      "id": 9,
+      "content": "I have a very senstitve skin, but this foundation makes everything perfect",
+      "optionId": 5
+    },
+    {
+      "id": 10,
+      "content": "I ordered medium beige and can't wait to try it on",
+      "optionId": 5
+    },
+    {
+      "id": 11,
+      "content": "Yay!!!!!! Waterproof mascara is here",
+      "optionId": 6
+    },
+    {
+      "id": 12,
+      "content": "It's here guys. Love it",
+      "optionId": 6
+    },
+    {
+      "id": 13,
+      "content": "I was expectiing more dark winter colors",
+      "optionId": 7
+    },
+    {
+      "id": 14,
+      "content": "I've ordered red and dark brown. Can't wait to try",
+      "optionId": 8
+    },
+    {
+      "id": 15,
+      "content": "WOW! My lipstick is absolutely beautiful",
+      "optionId": 8
+    },
+    {
+      "comment": "jelenaaa",
+      "id": 16
+    },
+    {
+      "comment": "jelenaaa",
+      "id": 17
     }
   ]
 }
