@@ -110,12 +110,29 @@
       "optionId": 8
     },
     {
-      "comment": "jelenaaa",
+      "content": "Bronzer is outstanding",
+      "optionId": 1,
       "id": 16
     },
     {
-      "comment": "jelenaaa",
+      "content": "I don't really like this colors",
+      "optionId": 7,
       "id": 17
+    },
+    {
+      "content": "yesss!",
+      "optionId": 2,
+      "id": 18
+    }
+  ],
+  "ratings": [
+    {
+      "id": 1,
+      "comments": "Yay. This collection is amazing!"
+    },
+    {
+      "id": 2,
+      "comments": "Love the collection!"
     }
   ]
 }

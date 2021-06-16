@@ -1,10 +1,21 @@
-## Makeup Collection
+# Makeup Collection
 
 Today we will be building an app for viewing Makeup Collection for Fall/Winter 2021. We will be using an open API
 "http://makeup-api.herokuapp.com/api/v1/products.json?brand=l%27oreal&tags_list=glutenfree".
 
 
 
+## Core Deliverables
+
+ - As a user I can see all the makeup collection displayed on the page, including the name, image, price and description
+ - As a user I can search for the product by name 
+
+
+## Stretch Deliverables
+
+- As a user I can rate the collection, describe my experience of the web page and see them when the page is displayed
+- As a user I can search for the product and find the comments specific to that product
+- As a user I can leave a comment on the specific product and see the comment after I refresh the page(post request)
 
 
 
