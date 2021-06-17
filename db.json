@@ -123,6 +123,11 @@
       "content": "yesss!",
       "optionId": 2,
       "id": 18
+    },
+    {
+      "content": "yay",
+      "optionId": 3,
+      "id": 19
     }
   ],
   "ratings": [
@@ -133,6 +138,14 @@
     {
       "id": 2,
       "comments": "Love the collection!"
+    },
+    {
+      "comments": "What??? Prices are high!",
+      "id": 3
+    },
+    {
+      "comments": "HAPPY!",
+      "id": 4
     }
   ]
 }

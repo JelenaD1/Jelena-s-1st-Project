@@ -13,10 +13,9 @@ Today we will be building an app for viewing Makeup Collection for Fall/Winter 2
 
 ## Stretch Deliverables
 
-- As a user I can rate the collection, describe my experience of the web page and see them when the page is displayed
-- As a user I can search for the product and find the comments specific to that product
-- As a user I can leave a comment on the specific product and see the comment after I refresh the page(post request)
-
+- As a user I can rate the collection, describe my experience of the web page and see it when the page is displayed(persist the data)
+- As a user I can search for the product by it's name, and read the comments specific to that product
+- As a user I can leave the comment on the specific product(persist the data)
 
 
 

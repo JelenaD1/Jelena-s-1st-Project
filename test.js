@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const post = document.querySelector(".post")
   const widget = document.querySelector(".star-widget")
   const editBtn = document.querySelector(".edit")
-  // const textarea = document.querySelector(".textdelete")
   const ul = document.querySelector(".review-form")
   const form = document.querySelector(".form-review")
   const div = document.querySelector("div#makeup-collection")
   const options = []
   const url = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=l%27oreal&tags_list=glutenfree"
+  const ratingButton = document.querySelector(".btnRating")
 
   const addCardCollection = (collection) => {
     const collectionCard = document.createElement("div")
@@ -36,13 +36,22 @@ document.addEventListener("DOMContentLoaded", () => {
       })
     })
 
-  const ratingButton = document.querySelector(".btnRating")
+    // Widget ratings
+  btn.onclick = () => {
+    widget.style.display = "none"
+    post.style.display = "block"
+    editBtn.onclick = () => {
+      widget.style.display = "block"
+      post.style.display = "none"
+      textarea.innerHTML = ""
+    }
+    return false
+  }
 
-  // When post is clicked display the rating descripton on the page
+  // When post is clicked(inside the widget) display the rating descripton on the page
   ratingButton.addEventListener("click", (event) => {
     const textarea = document.querySelector(".textdelete")
     const userRating = textarea.value
-    console.log(userRating)
     const confObject = {
       method: "POST",
       headers: {
@@ -62,8 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
   })
 
-
-  ////Post the rating comments when the page loads
+  /// /Post the rating comments when the page loads
   fetch("http://localhost:3000/ratings")
     .then(resp => resp.json())
     .then(data => {
@@ -73,20 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ul.append(liItems)
       })
     })
-  // Widget ratings
-  btn.onclick = () => {
-    widget.style.display = "none"
-    post.style.display = "block"
-    editBtn.onclick = () => {
-      widget.style.display = "block"
-      post.style.display = "none"
-      textarea.innerHTML = ""
-    }
-    return false
-  }
 
-  //add Event Listener on the form(comments) and allow user to post a comment
-  //Send a post request to the server 
+  
+
+  // add Event Listener on the form(comments) and allow user to post a comment
+  // Send a post request to the server
   form.addEventListener("submit", (event) => {
     event.preventDefault()
     const newReview = form.querySelector("#comment")
@@ -113,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         newReview.value = ""
       })
   })
-//get a options(products) from a database and have them displayed in the menu 
+  // get a options(products) from a database and have them displayed in the menu
   fetch("http://localhost:3000/options")
     .then(resp => resp.json())
     .then(data => {
@@ -126,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         options.push(object.name)
       })
     })
-//add Event Listener on the menu and allow user to select each option and read the comments specific to that option
+  // add Event Listener on the menu and allow user to select each option and read the comments specific to that option
   const menu = document.querySelector("#menu")
   menu.addEventListener("change", (event) => {
     div.innerHTML = ""
